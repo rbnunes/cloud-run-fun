@@ -5,13 +5,13 @@ server {
   # The rest of the server config is up to the user.
   location / {
     proxy_http_version 1.1;
-    proxy_set_header Connection "";
     proxy_buffering off;
-    proxy_set_header X-Real-IP $remote_addr;
     # Only proxy pass is up to the user
     ${CONFIG}
-    proxy_set_header Host $host;
-    proxy_set_header  Authorization $http_authorization;
+    proxy_set_header Connection "";
+    proxy_set_header X-Real-IP \$remote_addr;
+    proxy_set_header Host \$host;
+    proxy_set_header Authorization \$http_authorization;
     proxy_pass_header Authorization;
     proxy_pass_request_headers  on;
   }
