@@ -2,5 +2,5 @@ server {
   # Cloud Run will supply a $PORT env which we should listen on (or you can check on the revision).
   listen 8080;
   server_name  webhook.mintstars.com;
-  return  302 ${CONFIG};
+  return  302 ${CONFIG}/users/kyc/webhook;
 }
