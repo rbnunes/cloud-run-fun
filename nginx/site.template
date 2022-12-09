@@ -1,5 +1,5 @@
 server {
-  # Cloud Run will supply a $PORT env which we should listen on.
+  # Cloud Run will supply a $PORT env which we should listen on (or you can chek on the revision).
   listen 8080;
 
   # The rest of the server config is up to the user.
