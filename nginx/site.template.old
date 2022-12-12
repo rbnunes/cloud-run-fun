@@ -17,5 +17,5 @@ server {
     ${CONFIG}
   }
 }
-rewrite ^/(.*)$ http://www.domain2.com/$1 redirect;
-return  302 https://$server_name$request_uri;
+#rewrite ^/(.*)$ http://www.domain2.com/$1 redirect;  alte
+#return  302 https://$server_name$request_uri;
