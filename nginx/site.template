@@ -14,7 +14,7 @@ server {
     proxy_ssl_session_reuse off;
     
     proxy_pass https://${CONFIG_HOST}${CONFIG_PATH};
-    
-    ${CONFIG};
+
+    ${CONFIG}
   }
 }
